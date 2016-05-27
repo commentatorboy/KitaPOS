@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, session, redirect, url_for
+from flask import Flask, render_template, session, redirect, url_for, request
 from flask.ext.script import Manager, Shell
 from flask.ext.bootstrap import Bootstrap
 from flask.ext.moment import Moment
@@ -29,8 +29,8 @@ migrate = Migrate(app, db)
 
 class Product(db.Model):
     __tablename__ = 'products'
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(64), unique=True, index=True)
+    id = db.Column(db.Integer, primary_key=True, index=True)
+    name = db.Column(db.String(64), unique=True)
     salesPrice = db.Column(db.Integer)
     amount = db.Column(db.Integer)
     purchasedPrice = db.Column(db.Integer)
@@ -71,9 +71,8 @@ def insert():
         product = Product.query.filter_by(name=form.name.data).first()
 
         if product is None:
-            print(form.image)
-            product = Product(name=form.name.data, price=form.price.data, amount=form.amount.data)
-
+            print(form.name)
+            product = Product(name=form.name.data, amount=form.amount.data, salesPrice=form.salesPrice.data, purchasedPrice=form.purchasedPrice.data)
             db.session.add(product)
             session['known'] = False
         else:
@@ -87,6 +86,13 @@ def insert():
 def show():
     products = Product.query.order_by(Product.name).all()
     return render_template('products.html', products=products)
+
+#credits to http://stackoverflow.com/questions/11556958/sending-data-from-html-form-to-a-python-script-in-flask
+@app.route('/formbuy', methods=['POST'])
+def buy():
+    print("I got it!")
+    print(request.form['projectFilepath'])
+    return redirect(url_for('index'))
 
 def make_shell_context():
     return dict(app=app, db=db, Product=Product)
