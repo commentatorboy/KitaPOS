@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KitaPOS</title>
+</head>
+<body>
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Flasky{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    Insert a product into the database
+</div>
+{{ wtf.quick_form(form) }}
+{% endblock %}
+
+</body>
+</html>

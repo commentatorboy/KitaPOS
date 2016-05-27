@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="792f3b4d-df3e-45fb-9797-e8d465668d20" name="Default" comment="The main site">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Scripts/alembic.exe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Scripts/easy_install-3.5.exe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Scripts/easy_install.exe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Scripts/mako-render.exe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Scripts/pip.exe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Scripts/pip3.5.exe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Scripts/pip3.exe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Scripts/python.exe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Scripts/python35.dll" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Scripts/pythonw.exe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Scripts/wheel.exe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/KitaPOS.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data.sqlite" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/migrations/README" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/migrations/alembic.ini" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/migrations/env.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/migrations/script.py.mako" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/migrations/versions/132c2b951655_initial_commit_make_product.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/base.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/insert.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/products.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/Python-ast.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/Python.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/abstract.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/accu.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/asdl.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/ast.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/bitset.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/bltinmodule.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/boolobject.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/bytearrayobject.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/bytes_methods.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/bytesobject.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/cellobject.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/ceval.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/classobject.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/code.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/codecs.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/compile.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/complexobject.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/datetime.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/descrobject.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/dictobject.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/dtoa.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/dynamic_annotations.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/enumobject.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/errcode.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/eval.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/fileobject.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/fileutils.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/floatobject.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/frameobject.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/funcobject.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/genobject.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/graminit.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/grammar.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/import.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/intrcheck.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/iterobject.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/listobject.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/longintrepr.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/longobject.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/marshal.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/memoryobject.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/metagrammar.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/methodobject.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/modsupport.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/moduleobject.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/namespaceobject.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/node.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/object.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/objimpl.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/odictobject.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/opcode.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/osdefs.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/parsetok.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/patchlevel.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/pgen.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/pgenheaders.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/py_curses.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/pyarena.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/pyatomic.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/pycapsule.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/pyconfig.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/pyctype.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/pydebug.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/pyerrors.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/pyexpat.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/pyfpe.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/pygetopt.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/pyhash.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/pylifecycle.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/pymacconfig.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/pymacro.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/pymath.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/pymem.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/pyport.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/pystate.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/pystrcmp.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/pystrhex.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/pystrtod.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/pythonrun.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/pythread.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/pytime.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/rangeobject.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/setobject.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/sliceobject.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/structmember.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/structseq.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/symtable.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/sysmodule.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/token.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/traceback.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/tupleobject.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/typeslots.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/ucnhash.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/unicodeobject.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/warnings.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Include/weakrefobject.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Scripts/activate" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Scripts/activate.bat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Scripts/activate.ps1" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Scripts/activate_this.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/Scripts/deactivate.bat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/venv/pip-selfcheck.json" />
+    </list>
+    <ignored path="KitaPOS.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="KitaPOS" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-347">
+              <caret line="53" column="56" selection-start-line="53" selection-start-column="56" selection-end-line="53" selection-end-column="56" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="products.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/products.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="insert.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/insert.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="52" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/index.py" />
+        <option value="$PROJECT_DIR$/templates/current_menu.html" />
+        <option value="$PROJECT_DIR$/templates/test.html" />
+        <option value="$PROJECT_DIR$/templates/menu.html" />
+        <option value="$PROJECT_DIR$/templates/insert.html" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/templates/products.html" />
+        <option value="$PROJECT_DIR$/app.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1456" />
+    <option name="height" value="876" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KitaPOS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KitaPOS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KitaPOS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KitaPOS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KitaPOS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="KitaPOS" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="KitaPOS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="KitaPOS" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="KitaPOS" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="KitaPOS" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="KitaPOS" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="KitaPOS" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="792f3b4d-df3e-45fb-9797-e8d465668d20" name="Default" comment="" />
+      <created>1463818658801</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1463818658801</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView" selected-index="4">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32898173" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32898173" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32898173" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="The main site" />
+    <option name="LAST_COMMIT_MESSAGE" value="The main site" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/products.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/insert.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="52" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="74" selection-start-line="20" selection-start-column="74" selection-end-line="20" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="52" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/insert.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-347">
+          <caret line="53" column="56" selection-start-line="53" selection-start-column="56" selection-end-line="53" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/products.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

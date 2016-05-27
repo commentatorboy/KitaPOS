@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KitaPOS</title>
+</head>
+<body>
+{% extends "base.html" %}
+
+{% block page_content %}
+<div class="page-header">
+    Show products in database
+</div>
+
+<div>
+    {% for product in products %}
+        <div>{{ product.name  }} {{product.price}}</div>
+    {% endfor %}
+</div>
+{% endblock %}
+</body>
+</html>
