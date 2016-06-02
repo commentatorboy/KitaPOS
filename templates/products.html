@@ -16,31 +16,35 @@
 <!-- one grid for each product -->
 <div class="col-md-12">
     <div class="row">
-    {% for product in products %}
-        <!-- credits http://shoelace.io/-->
-        <div class="col-sm-4">product image</div>
-        <div class="col-sm-offset-1 col-sm-3">{{ product.name  }}</div>
-        <div class="col-sm-2">{{ product.salesPrice  }} kr</div>
-        <div class="col-sm-2">{{ product.amount  }}
-            <!-- http://bootsnipp.com/snippets/featured/bootstrap-number-spinner-on-click-hold -->
-             <form action="formbuy" method="post">
-                <div class="input-group number-spinner">
-                    <div class="input-group number-spinner">
-                        <span class="input-group-btn data-dwn">
-                            <button type="button" class="btn btn-default btn-info" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
-                        </span>
-                        <input type="text" class="form-control text-center" value="1" min="0" max="40" name="projectFilepath">
-                        <span class="input-group-btn data-up">
-                            <button type="button" class="btn btn-default btn-info" data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
-                        </span>
-			        </div>
-                <input class="form-control text-center" value="1" min="-10" max="40" name="projectFilepath">
-                </div>
-                 <button type="submit" class="btn btn-default">Submit</button>
-             </form>
-        </div>
+        <form action="formbuy" method="post">
+                {% for product in products %}
+                <!-- credits http://shoelace.io/-->
+                <div class="col-sm-4">product image</div>
+                <div class="col-sm-offset-1 col-sm-3">{{ product.name  }}</div>
+                <input type="hidden" name="projectFilepath" value="{{product.id}}" min="0" max="40">
 
-    {% endfor %}
+                <div class="col-sm-2">{{ product.salesPrice  }} kr</div>
+                <div class="col-sm-2">{{ product.amount  }}
+                    <!-- http://bootsnipp.com/snippets/featured/bootstrap-number-spinner-on-click-hold -->
+
+                        <div class="input-group number-spinner">
+                            <div class="input-group number-spinner">
+                                <span class="input-group-btn data-dwn">
+                                    <button type="button" class="btn btn-default btn-info" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                </span>
+                                <input type="text" class="form-control text-center" value="1" min="0" max="40" >
+                                <span class="input-group-btn data-up">
+                                    <button type="button" class="btn btn-default btn-info" data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                </span>
+                            </div>
+                        </div>
+
+                </div>
+
+            {% endfor %}
+            <button type="submit" class="btn btn-default col-sm-2 col-sm-offset-10 ">betalt</button>
+
+        </form>
     </div>
 </div>
 {% endblock %}

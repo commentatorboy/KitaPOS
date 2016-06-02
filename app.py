@@ -10,6 +10,7 @@ from flask.ext.sqlalchemy import SQLAlchemy
 from flask.ext.migrate import Migrate, MigrateCommand
 from flask_wtf.file import FileField, FileAllowed, FileRequired
 from flask.ext.uploads import UploadSet, IMAGES
+from datetime import datetime
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
@@ -34,6 +35,7 @@ class Product(db.Model):
     salesPrice = db.Column(db.Integer)
     amount = db.Column(db.Integer)
     purchasedPrice = db.Column(db.Integer)
+    customer_order_id = db.Column(db.Integer, db.ForeignKey('customer_orders.id'))
     #supplier_id = db.Column(db.Integer, db.ForeignKey('supplier.id'))
     #desc = db.Column(db.String(64))
     #the path for the image?
@@ -42,6 +44,16 @@ class Product(db.Model):
 
     def __repr__(self):
         return '<Product %r>' % self.name
+
+class CustomerOrder(db.Model):
+    __tablename__ = 'customer_orders'
+    id = db.Column(db.Integer, primary_key=True, index=True)
+    products = db.relationship('Product', backref='customerorder', lazy='dynamic')
+    timeBrought = db.Column(db.DateTime())
+
+    def __repr__(self):
+        return '<CustomerOrder %r>' % self.id
+
 
 def tmpl_show_menu():
     return render_template('base.html')
@@ -91,13 +103,34 @@ def show():
 @app.route('/formbuy', methods=['POST'])
 def buy():
     print("I got it!")
-    print(request.form['projectFilepath'])
+
+    test = request.form.getlist('projectFilepath')
+    print(test)
+
     return redirect(url_for('index'))
 
 def make_shell_context():
     return dict(app=app, db=db, Product=Product)
 manager.add_command("shell", Shell(make_context=make_shell_context))
 manager.add_command('db', MigrateCommand)
+
+
+#for unit testing only
+@manager.command
+def test():
+    """Run the unit tests."""
+    import unittest
+    tests = unittest.TestLoader().discover('tests')
+    unittest.TextTestRunner(verbosity=2).run(tests)
+
+def create_app(config_name):
+    app = Flask(__name__)
+    bootstrap.init_app(app)
+    moment.init_app(app)
+    db.init_app(app)
+    # attach routes and custom error pages here
+    return app
+
 
 if __name__ == '__main__':
     manager.run()
