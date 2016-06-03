@@ -118,14 +118,43 @@ def show():
 def buy():
     print("I got it!")
 
-    test = request.form.getlist('projectFilepath')
-    print(test)
+    products = []
+    orderItems = []
+    productIds = request.form.getlist('productId')
+    itemsSold = request.form.getlist('itemSold')
+    totalPrice = 0;
 
-    #save Customer Order
+    #get products from db
+    for proid in productIds:
+        id = int(proid)
+        products.append(db.session.query(Product).filter(Product.id == id).first())
 
-    #delete product.amount from DB
+    #save Order item
+    for pro in products:
+        #print(pro.amount)
 
-    #check if product.amount is under 0 = sold out
+        # delete product.amount from DB
+        for itemSold in itemsSold:
+            amount = int(itemSold)
+            pro.amount -= amount
+            #make order items
+            orderItems.append(OrderItem(product=pro, amount=amount))
+            #total price
+            totalPrice += pro.salesPrice
+            db.session.add(pro)
+
+    for orderItem in orderItems:
+        db.session.add(orderItem)
+
+    order = CustomerOrder(order_items=orderItems, timeBrought=datetime.now(), totalPrice=totalPrice)
+    db.session.add(order)
+
+    db.session.commit()
+    product = db.session.query(Product).filter(Product.id == 1).first()
+    print(product.amount)
+    print(order.totalPrice)
+
+
 
     return redirect(url_for('index'))
 

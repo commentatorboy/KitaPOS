@@ -45,13 +45,11 @@ class BasicsTestCase(unittest.TestCase):
         #save order items
         orderItem1 = OrderItem(product=product1, amount= buyAmount)
         orderItem2 = OrderItem(product=product2, amount= buyAmount)
-        #order1 = CustomerOrder(product_id=product1.id, timeBrought=datetime.now())
-        #order2 = CustomerOrder(product_id=product2.id, timeBrought=datetime.now())
 
         orderItems = [orderItem1, orderItem2]
 
         totalPrice = purchasedPrice+purchasedPrice2
-        totalAmount = purchasedPrice+purchasedPrice2
+
         order3 = CustomerOrder(order_items=orderItems, timeBrought=datetime.now() , totalPrice=totalPrice)
         db.session.add(product1)
         db.session.add(product2)
