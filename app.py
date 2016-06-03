@@ -35,7 +35,6 @@ class Product(db.Model):
     salesPrice = db.Column(db.Integer)
     amount = db.Column(db.Integer)
     purchasedPrice = db.Column(db.Integer)
-    customer_order_id = db.Column(db.Integer, db.ForeignKey('customer_orders.id'))
     #supplier_id = db.Column(db.Integer, db.ForeignKey('supplier.id'))
     #desc = db.Column(db.String(64))
     #the path for the image?
@@ -48,12 +47,27 @@ class Product(db.Model):
 class CustomerOrder(db.Model):
     __tablename__ = 'customer_orders'
     id = db.Column(db.Integer, primary_key=True, index=True)
-    products = db.relationship('Product', backref='customerorder', lazy='dynamic')
+    order_items = db.relationship('OrderItem', backref='customerorder', lazy='dynamic')
     timeBrought = db.Column(db.DateTime())
+    totalPrice = db.Column(db.Integer)
+
 
     def __repr__(self):
         return '<CustomerOrder %r>' % self.id
 
+class OrderItem(db.Model):
+    __tablename__ = 'order_items'
+    id = db.Column(db.Integer, primary_key=True, index=True)
+
+    product_id = db.Column(db.Integer, db.ForeignKey('products.id'))
+    product = db.relationship('Product', backref='orderitem')
+
+    customer_order_id = db.Column(db.Integer, db.ForeignKey('customer_orders.id'))
+
+    amount = db.Column(db.Integer)
+
+    def __repr__(self):
+        return '<OrderItem %r>' % self.id
 
 def tmpl_show_menu():
     return render_template('base.html')
@@ -106,6 +120,12 @@ def buy():
 
     test = request.form.getlist('projectFilepath')
     print(test)
+
+    #save Customer Order
+
+    #delete product.amount from DB
+
+    #check if product.amount is under 0 = sold out
 
     return redirect(url_for('index'))
 
