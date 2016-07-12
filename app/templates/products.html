@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KitaPOS</title>
+</head>
+<body>
+{% extends "base.html" %}
+
+{% block page_content %}
+<div class="page-header">
+    <div class="row">
+        <div class="col-sm-4">product image</div>
+        <div class="col-sm-offset-1 col-sm-3">Navn</div>
+        <div class="col-sm-2">Pris</div>
+        <div class="col-sm-2">Antal</div>
+    </div>
+</div>
+
+
+<!-- one grid for each product -->
+<div class="col-md-12">
+    <div class="row">
+        <form action="formbuy" method="post">
+                {% for product in products %}
+                <!-- credits http://shoelace.io/-->
+                <div class="col-sm-4">product image</div>
+                <div class="col-sm-offset-1 col-sm-3">{{ product.name }}</div>
+                <input type="hidden" name="productId" value="{{product.id}}" min="0" max="40">
+
+                <div class="col-sm-2">{{ product.salesPrice  }} kr</div>
+
+                {% if product.amount >= 0  %}
+                    <div class="col-sm-2">
+                        <!-- http://bootsnipp.com/snippets/featured/bootstrap-number-spinner-on-click-hold -->
+
+                            <div class="input-group number-spinner">
+                                <div class="input-group number-spinner">
+                                    <span class="input-group-btn data-dwn">
+                                        <button type="button" class="btn btn-default btn-info" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                    </span>
+                                    <input name="itemSold" type="text" class="form-control text-center" value="0" min="0" max="{{product.amount}}" >
+                                    <span class="input-group-btn data-up">
+                                        <button type="button" class="btn btn-default btn-info" data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                    </span>
+                                </div>
+                            </div>
+                    </div>
+                {% else %}
+                    <div class="col-sm-2"> SOLD OUT!!!!!!!
+                    </div>
+                {% endif %}
+
+            {% endfor %}
+            <button data-id=${Id} type="button" onclick="ConfirmDelete(this)" class="btn btn-default col-sm-2 col-sm-offset-10 ">Buy</button>
+
+            <!-- modal popup window credits http://code.tutsplus.com/tutorials/creating-a-web-app-from-scratch-using-python-flask-and-mysql-part-4--cms-23187-->
+            <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header" style="text-align:center;">
+                            <h4 class="modal-title" id="deleteModalLabel">You are buying the products right now.</h4>
+                            <p>Make sure that it is the right product before buying.</p>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">No (Cancel)</button>
+                            <button type="submit" class="btn btn-primary">Yes (Confirm/Buy)</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}
+</body>
+</html>
