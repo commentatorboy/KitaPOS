@@ -32,6 +32,16 @@ class Product(db.Model):
     def __repr__(self):
         return '<Product %r>' % self.name
 
+
+class ProductDetail(db.Model):
+    _tablename__ = 'product_details'
+    product_code = db.Column(db.Integer)
+    more_desc = db.Column(db.String)
+
+    def __repr__(self):
+        return '<ProductDetail %r>' % self.name
+
+
 class CustomerOrder(db.Model):
     __tablename__ = 'customer_orders'
     id = db.Column(db.Integer, primary_key=True, index=True)
@@ -41,6 +51,7 @@ class CustomerOrder(db.Model):
 
     def __repr__(self):
         return '<CustomerOrder %r>' % self.id
+
 
 class OrderItem(db.Model):
     __tablename__ = 'order_items'
@@ -56,6 +67,37 @@ class OrderItem(db.Model):
     def __repr__(self):
         return '<OrderItem %r>' % self.id
 
+
+class Employee(db.Model):
+    _tablename__ = 'employees'
+    employee_id = db.Column(db.Integer)
+    last_name = db.Column(db.String)
+    first_name = db.Column(db.String)
+
+    def __repr__(self):
+        return '<OrderItem %r>' % self.id
+
+class Supplier(db.Model):
+    _tablename__ = 'suppliers'
+    supplier_id = db.Column(db.Integer)
+    company_name = db.Column(db.String)
+
+    def __repr__(self):
+        return '<OrderItem %r>' % self.id
+
+class ProductSupplier(db.Model):
+    product_code = db.Column(db.Integer)
+    supplier_id = db.Column(db.Integer)
+
+    def __repr__(self):
+        return '<OrderItem %r>' % self.id
+
+class Shipping(db.Column):
+    shipper_id = db.Column(db.Integer)
+    company_name = db.Column(db.Integer)
+
+    def __repr__(self):
+        return '<OrderItem %r>' % self.id
 
 class Role(db.Model):
     __tablename__ = 'roles'
