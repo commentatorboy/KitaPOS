@@ -63,3 +63,4 @@ target/
 
 #misc
 .idea/workspace.xml
+data-dev.sqlite
