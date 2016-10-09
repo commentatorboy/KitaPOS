@@ -1,11 +1,20 @@
-from flask import render_template, session, redirect, url_for, current_app, request, abort, jsonify
+from flask import render_template, session, redirect, url_for, current_app, request, abort, jsonify, flash
 from flask_sqlalchemy import get_debug_queries
-from . import main
+
 from .. import db
-from ..models import CustomerOrder, Product, OrderItem
+from ..models.Product import *
+from ..models import Permission
+from ..models import Employee
+from ..models import Role
+from ..models.Order import Order
+from ..models.Order import OrderLine
+from ..models import User
 from . import main
+from .. import auth
+from ..auth.forms import LoginForm
 from .forms import InsertForm
 from datetime import datetime
+from flask_login import current_user, login_user, login_required
 
 
 def tmpl_show_menu():
@@ -38,10 +47,11 @@ def server_shutdown():
 def index():
     return tmpl_show_menu()
 
-
+#remember to set login_required on
 @main.route('/Insert', methods=['GET', 'POST'])
 def insert():
     form = InsertForm()
+    print(current_user)
     if form.validate_on_submit():
         # check for the different classes, to insert into database
         # name,price, amount supplier,desc,image,brand,submit
@@ -49,61 +59,61 @@ def insert():
 
         if product is None:
             'print(form.name)'
-            product = Product(name=form.name.data, amount=form.amount.data, salesPrice=form.purchasedPrice.data,
-                              purchasedPrice=form.salesPrice.data)
+            product = Product(name=form.name.data, units_in_stock=form.amount.data, suggested_unit_price=form.purchasedPrice.data,
+                              buy_unit_price=form.salesPrice.data)
             db.session.add(product)
         session['name'] = form.name.data
         return redirect(url_for('main.insert'))
     return render_template('insert.html', form=form, name=session.get('name'))
 
-
 @main.route('/Products')
+@login_required
+
 def show():
     products = Product.query.order_by(Product.name).all()
     return render_template('products.html', products=products)
 
 
 # credits to http://stackoverflow.com/questions/11556958/sending-data-from-html-form-to-a-python-script-in-flask
+
 @main.route('/formbuy', methods=['POST'])
+@login_required
 def buy():
     products = []
-    orderItems = []
-    productIds = request.form.getlist('productId')
-    itemsSold = request.form.getlist('itemSold')
-    totalPrice = 0;
+    # this is the order lines. Order has a list of order lines (order items)
+    order_items = []
+    product_ids = request.form.getlist('productId')
+    items_sold = request.form.getlist('itemSold')
+    total_price = 0
 
-    # get products from db
-    for proid in productIds:
-        id = int(proid)
-        products.append(db.session.query(Product).filter(Product.id == id).first())
+    """ logic for buying.
+     0. http://www.tomjewett.com/dbdesign/dbdesign.php?page=manymany.php
+     1. make Order
+     2. put each product into "orderline" for saving (call it basket of some sort) use the order id you made for that
+     3. change the units, (how much you have brought - what is in stock)
+     3. save them all in db
+    """
 
-    # save Order item
-    for pro in products:
-        # print(pro.amount)
-
-        # delete product.amount from DB
-        for itemSold in itemsSold:
-            amount = int(itemSold)
-            pro.amount -= amount
-            # make order items
-            orderItems.append(OrderItem(product=pro, amount=amount))
-            # total price
-            totalPrice += pro.salesPrice
-            db.session.add(pro)
-
-    for orderItem in orderItems:
-        db.session.add(orderItem)
-
-    order = CustomerOrder(order_items=orderItems, timeBrought=datetime.now(), totalPrice=totalPrice)
+    # make order
+    order = Order(time_brought=datetime.now(), total_price=total_price, order_status="queue", user_id=current_user.id)
     db.session.add(order)
+    db.session.commit()
+    # make OrderLine by using the products
+    # this should be optimized
+    for i in range(0, len(product_ids)):
+        product = Product.query.filter_by(product_code=product_ids[i]).first()
+
+        order_line = OrderLine(order_id=order.order_id, unit_price=product.buy_unit_price, quantity=items_sold[i], product_code=product.product_code)
+        db.session.add(order_line)
+        product.units_in_stock -= int(items_sold[i]) #please optimize this
+        db.session.add(product)
 
     db.session.commit()
-    # product = db.session.query(Product).filter(Product.id == 1).first()
-
     return redirect(url_for('main.index'))
 
 
 # credits http://stackoverflow.com/questions/17365821/using-jquery-autocomplete-with-flask
+
 @main.route('/autocomplete', methods=['GET'])
 def autocomplete():
     search = request.args.get('q')
@@ -115,6 +125,8 @@ def autocomplete():
 
 
 '''
+CHANGE THE NEW ORDERITEMS TO ORDERLINE!!!!!!
+
 @main.route('/user/<username>')
 def user(username):
     user = User.query.filter_by(username=username).first_or_404()

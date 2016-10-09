@@ -1,25 +1,27 @@
-from flask.ext.wtf import Form
-from wtforms import StringField, TextAreaField, BooleanField, SelectField, SubmitField, IntegerField
+from flask_wtf import Form
+from wtforms import StringField, TextAreaField, BooleanField, SelectField, SubmitField, IntegerField, PasswordField
 from wtforms.validators import Required, Length, Email, Regexp
 from wtforms import ValidationError
-from flask.ext.pagedown.fields import PageDownField
+from flask_pagedown.fields import PageDownField
 from ..models import Role, User
+
 
 #insert form
 class InsertForm(Form):
     #what is the name of the product?
     name = StringField('Product name', validators=[Required()])
-    #What is the sales price?
+    #What is the purchase price?
     salesPrice = IntegerField('Købspris', validators=[Required()])
     #how many did you brought
     amount = IntegerField('Antal', validators=[Required()])
-    #what is the purchased price?
-    purchasedPrice = IntegerField('Salspris', validators=[Required()])
+    #what is the retail price?
+    purchasedPrice = IntegerField('Salgspris', validators=[Required()])
     #supplier = StringField('Name of the supplier', validators=[Required()])
     #desc = StringField('The description of the product')
     #image = FileField('image', validators=[FileAllowed(['jpg', 'png'], 'Images only!')])
     #brand = StringField('Name of the brand', validators=[Required()])
     submit = SubmitField('Submit')
+
 
 class NameForm(Form):
     name = StringField('What is your name?', validators=[Required()])

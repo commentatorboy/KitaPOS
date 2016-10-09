@@ -14,7 +14,13 @@ if os.path.exists('.env'):
             os.environ[var[0]] = var[1]
 
 from app import create_app, db
-from app.models import User, Follow, Role, Permission
+from app.models.User import User
+from app.models.Role import Role
+from app.models.Permission import Permission
+from app.models.Product import Product
+from app.models.Employee import Employee
+from app.models.Order import Order
+
 from flask_script import Manager, Shell
 from flask_migrate import Migrate, MigrateCommand
 
@@ -24,8 +30,8 @@ migrate = Migrate(app, db)
 
 
 def make_shell_context():
-    return dict(app=app, db=db, User=User, Follow=Follow, Role=Role,
-                Permission=Permission)
+    return dict(app=app, db=db, User=User, Role=Role, Product=Product,
+                Permission=Permission, Employee=Employee, Order=Order)
 manager.add_command("shell", Shell(make_context=make_shell_context))
 manager.add_command('db', MigrateCommand)
 
@@ -72,9 +78,6 @@ def deploy():
 
     # create user roles
     Role.insert_roles()
-
-    # create self-follows for all users
-    User.add_self_follows()
 
 
 if __name__ == '__main__':

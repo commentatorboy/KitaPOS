@@ -26,11 +26,11 @@
                 <!-- credits http://shoelace.io/-->
                 <div class="col-sm-4">product image</div>
                 <div class="col-sm-offset-1 col-sm-3">{{ product.name }}</div>
-                <input type="hidden" name="productId" value="{{product.id}}" min="0" max="40">
+                <input type="hidden" name="productId" value="{{product.product_code}}" min="0" max="40">
 
-                <div class="col-sm-2">{{ product.salesPrice  }} kr</div>
+                <div class="col-sm-2">{{ product.buy_unit_price  }} kr</div>
 
-                {% if product.amount >= 0  %}
+                {% if product.units_in_stock >= 0  %}
                     <div class="col-sm-2">
                         <!-- http://bootsnipp.com/snippets/featured/bootstrap-number-spinner-on-click-hold -->
 
@@ -39,7 +39,7 @@
                                     <span class="input-group-btn data-dwn">
                                         <button type="button" class="btn btn-default btn-info" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                     </span>
-                                    <input name="itemSold" type="text" class="form-control text-center" value="0" min="0" max="{{product.amount}}" >
+                                    <input name="itemSold" type="text" class="form-control text-center" value="0" min="0" max="{{product.units_in_stock}}" >
                                     <span class="input-group-btn data-up">
                                         <button type="button" class="btn btn-default btn-info" data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                     </span>

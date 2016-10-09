@@ -4,7 +4,7 @@ import re
 from base64 import b64encode
 from flask import url_for
 from app import create_app, db
-from app.models import User, Role, Post, Comment
+from app.models import User, Role
 
 
 class APITestCase(unittest.TestCase):
@@ -200,66 +200,3 @@ class APITestCase(unittest.TestCase):
         self.assertTrue(response.status_code == 200)
         json_response = json.loads(response.data.decode('utf-8'))
         self.assertTrue(json_response['username'] == 'susan')
-
-    def test_comments(self):
-        # add two users
-        r = Role.query.filter_by(name='User').first()
-        self.assertIsNotNone(r)
-        u1 = User(email='john@example.com', username='john',
-                  password='cat', confirmed=True, role=r)
-        u2 = User(email='susan@example.com', username='susan',
-                  password='dog', confirmed=True, role=r)
-        db.session.add_all([u1, u2])
-        db.session.commit()
-
-        # add a post
-        post = Post(body='body of the post', author=u1)
-        db.session.add(post)
-        db.session.commit()
-
-        # write a comment
-        response = self.client.post(
-            url_for('api.new_post_comment', id=post.id),
-            headers=self.get_api_headers('susan@example.com', 'dog'),
-            data=json.dumps({'body': 'Good [post](http://example.com)!'}))
-        self.assertTrue(response.status_code == 201)
-        json_response = json.loads(response.data.decode('utf-8'))
-        url = response.headers.get('Location')
-        self.assertIsNotNone(url)
-        self.assertTrue(json_response['body'] ==
-                        'Good [post](http://example.com)!')
-        self.assertTrue(
-            re.sub('<.*?>', '', json_response['body_html']) == 'Good post!')
-
-        # get the new comment
-        response = self.client.get(
-            url,
-            headers=self.get_api_headers('john@example.com', 'cat'))
-        self.assertTrue(response.status_code == 200)
-        json_response = json.loads(response.data.decode('utf-8'))
-        self.assertTrue(json_response['url'] == url)
-        self.assertTrue(json_response['body'] ==
-                        'Good [post](http://example.com)!')
-
-        # add another comment
-        comment = Comment(body='Thank you!', author=u1, post=post)
-        db.session.add(comment)
-        db.session.commit()
-
-        # get the two comments from the post
-        response = self.client.get(
-            url_for('api.get_post_comments', id=post.id),
-            headers=self.get_api_headers('susan@example.com', 'dog'))
-        self.assertTrue(response.status_code == 200)
-        json_response = json.loads(response.data.decode('utf-8'))
-        self.assertIsNotNone(json_response.get('comments'))
-        self.assertTrue(json_response.get('count', 0) == 2)
-
-        # get all the comments
-        response = self.client.get(
-            url_for('api.get_comments', id=post.id),
-            headers=self.get_api_headers('susan@example.com', 'dog'))
-        self.assertTrue(response.status_code == 200)
-        json_response = json.loads(response.data.decode('utf-8'))
-        self.assertIsNotNone(json_response.get('comments'))
-        self.assertTrue(json_response.get('count', 0) == 2)
