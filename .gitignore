@@ -44,3 +44,4 @@ venv
 # files
 data-dev.sqlite
 config.py
+.idea/workspace.xml
